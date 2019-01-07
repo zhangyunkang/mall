@@ -1,5 +1,17 @@
 # mall
 
+## 说明
+
+> 基于SpringBoot+MyBatis的电商系统，包括前台商城系统及后台管理系统。
+
+> 如果该项目对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！
+
+> 或者您可以 "follow" 一下，该项目将持续更新，不断完善功能。
+
+> 项目交流QQ群：[959351312](http://qm.qq.com/cgi-bin/qm/qr?k=V6xu5c12j9qhnMUNdDRzakNxRKzOxibQ)。
+
+> 如有问题或者好的建议可以在 Issues 中提。
+
 ## 前言
 
 `mall`项目致力于打造一个完整的电商系统，采用现阶段流行技术实现。
@@ -14,17 +26,28 @@
 
 > 后台管理系统
 
-- 前端项目`mall-admin-web`地址：https://github.com/macrozheng/mall-admin-web
-- 后台管理系统功能演示：[后台管理系统功能演示.gif](document/resource/mall-admin.gif)
+前端项目`mall-admin-web`地址：https://github.com/macrozheng/mall-admin-web 
+
+项目演示地址： [http://39.98.190.128/index.html](http://39.98.190.128/index.html)  
+  
+![后台管理系统功能演示.gif](https://github.com/macrozheng/mall/blob/master/document/resource/mall-admin.gif)
+
+> 前台商城系统
+
+前端项目`mall-app-web`地址：敬请期待......
+
+项目演示地址：[http://39.98.190.128/mall-app/mainpage.html](http://39.98.190.128/mall-app/mainpage.html)
+
+![前台商城系统功能演示.gif](https://github.com/macrozheng/mall/blob/master/document/resource/mall-app.gif)
 
 ### 组织结构
 
 ``` lua
 mall
 ├── mall-mbg -- MyBatisGenerator生成的数据库操作代码
-├── mall-admin -- 后台商城管理系统
+├── mall-admin -- 后台商城管理系统接口
 ├── mall-search -- 基于Elasticsearch的商品搜索系统
-├── mall-portal -- 前台商城系统
+├── mall-portal -- 前台商城系统接口
 └── mall-demo -- 框架搭建时的测试代码
 ```
 
@@ -128,25 +151,39 @@ nginx | 1.10 | http://nginx.org/en/download.html
 
 > 本地环境搭建
 
-- 本地安装开发环境中的所有工具并启动，采用默认配置即可;
-- 克隆源代码到本地，使用IDEA打开，并完成编译;
+- 本地安装开发环境中的所有工具并启动，具体参考[deploy-windows.md](document/reference/deploy-windows.md);
+- 克隆源代码到本地，使用IDEA或Eclipse打开，并完成编译;
 - 在mysql中新建mall数据库，导入document/sql下的mall.sql文件；
-- 启动mall-admin项目：直接运行com.macro.mall.MallAdminApplication即可，
+- 启动mall-admin项目：直接运行com.macro.mall.MallAdminApplication的main方法即可，
   接口文档地址：http://localhost:8080/swagger-ui.html;
-- 启动mall-search项目：直接运行com.macro.mall.search.MallSearchApplication即可，
+- 启动mall-search项目：直接运行com.macro.mall.search.MallSearchApplication的main方法即可，
   接口文档地址：http://localhost:8081/swagger-ui.html;
-- 启动mall-portal项目：直接运行com.macro.mall.portal.MallPortalApplication即可，
+- 启动mall-portal项目：直接运行com.macro.mall.portal.MallPortalApplication的main方法即可，
   接口文档地址：http://localhost:8085/swagger-ui.html;
-- 克隆`mall-admin-web`项目，并导入到IDEA中并完成编译，[mall-admin-web](https://github.com/macrozheng/mall-admin-web);
-- 运行命令：npm run dev,访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面；
+- 克隆`mall-admin-web`项目，并导入到IDEA中并完成编译[传送门](https://github.com/macrozheng/mall-admin-web);
+- 运行命令：npm run dev,访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面;
 - ELK日志收集系统的搭建：参考[elk.md](document/elk/elk.md)。
 
 > docker环境部署
 
 - 安装CenterOs7.2在VirtualBox虚拟机中；
 - 配置本地host:参考[host.txt](document/docker/host.txt),将ip地址改为虚拟机的ip地址;
-- 使用maven构建`mall-admin`、`mall-search`、`mall-portal`的docker镜像，参考[docker.md](document/docker/docker.md)中的使用maven构建Docker镜像；
-- 参考[docker-deploy.md](document/docker/docker-deploy.md)进行部署。
+- 使用maven构建`mall-admin`、`mall-search`、`mall-portal`的docker镜像，参考[docker.md](document/reference/docker.md)中的使用maven构建Docker镜像;
+- 部署步骤参考[docker-deploy.md](document/docker/docker-deploy.md)进行部署。
+
+## 参考资料
+
+- [Spring实战（第4版）](https://book.douban.com/subject/26767354/)
+- [Spring Boot实战](https://book.douban.com/subject/26857423/)
+- [Spring Cloud微服务实战](https://book.douban.com/subject/27025912/)
+- [Spring Cloud与Docker微服务架构实战](https://book.douban.com/subject/27028228/)
+- [Spring Data实战](https://book.douban.com/subject/25975186/)
+- [MyBatis从入门到精通](https://book.douban.com/subject/27074809/)
+- [深入浅出MySQL](https://book.douban.com/subject/25817684/)
+- [循序渐进Linux（第2版）](https://book.douban.com/subject/26758194/)
+- [Elasticsearch 技术解析与实战](https://book.douban.com/subject/26967826/)
+- [MongoDB实战(第二版)](https://book.douban.com/subject/27061123/)
+- [Kubernetes权威指南](https://book.douban.com/subject/26902153/)
 
 ## 许可证
 
