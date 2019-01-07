@@ -160,7 +160,7 @@ nginx | 1.10 | http://nginx.org/en/download.html
   接口文档地址：http://101.132.33.215:8081/swagger-ui.html;
 - 启动mall-portal项目：直接运行com.macro.mall.portal.MallPortalApplication的main方法即可，
   接口文档地址：http://101.132.33.215:8443/swagger-ui.html;
-- 克隆`mall-admin-web`项目，并导入到IDEA中并完成编译[传送门](https://github.com/macrozheng/mall-admin-web);
+- `mall-admin-web`项目为后台管理界面前端部分，在线演示地址：http://101.132.33.215：80;
 - 运行命令：npm run dev,访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面;
 - ELK日志收集系统的搭建：参考[elk.md](document/elk/elk.md)。
 
